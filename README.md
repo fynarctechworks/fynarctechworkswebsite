@@ -7,8 +7,41 @@ A code-owned rebuild of the original Framer marketing site — you own every fil
 
 ```bash
 npm install
-npm run dev        # http://localhost:3000
+cp .env.example .env.local   # then fill in the values (see "Contact form" below)
+npm run dev                  # http://localhost:3000
 ```
+
+## Contact form (email delivery)
+
+The contact form POSTs to `/api/contact`, which sends an email via [Resend](https://resend.com).
+Until the env vars are set it fails gracefully ("email us directly"); no email is sent.
+
+To enable it, set these (in `.env.local` for dev, and in Vercel → Settings →
+Environment Variables for production):
+
+| Variable | What it is |
+|----------|-----------|
+| `RESEND_API_KEY` | Your Resend API key (`re_…`). |
+| `CONTACT_TO_EMAIL` | Where submissions arrive — `fynarctechworks@gmail.com`. |
+| `CONTACT_FROM_EMAIL` | The "from" address. Must be on a Resend-verified domain, e.g. `FYN ARC Techworks <noreply@fynarctechworks.com>`. Use `onboarding@resend.dev` for testing before your domain is verified. |
+
+**Setup steps:** create a Resend account → verify `fynarctechworks.com` under Domains
+(add the DNS records Resend gives you) → create an API key → set the three vars.
+The form includes a hidden honeypot field and server-side Zod validation for spam/abuse.
+
+## Deploy (Vercel — auto-deploy on push)
+
+This repo is set up for Vercel's Git integration:
+
+1. Go to [vercel.com/new](https://vercel.com/new) and import
+   `fynarctechworks/fynarctechworkswebsite`.
+2. Framework preset auto-detects **Next.js** — no config needed (`vercel.json` is included).
+3. Add the three contact-form env vars (above) under **Environment Variables**.
+4. Deploy. From then on: **every push to `main` auto-deploys to production**, and every
+   branch/PR gets its own **preview URL**.
+
+`.github/workflows/ci.yml` also type-checks and builds on every push/PR, so breakage
+is caught before it ships.
 
 ## Build for production
 

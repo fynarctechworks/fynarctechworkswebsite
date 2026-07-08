@@ -14,6 +14,7 @@ type Fields = {
   email: string;
   phone: string;
   message: string;
+  website: string; // honeypot — hidden, must stay empty
 };
 
 const initialFields: Fields = {
@@ -22,25 +23,52 @@ const initialFields: Fields = {
   email: "",
   phone: "",
   message: "",
+  website: "",
 };
 
 export function ContactForm() {
   const [fields, setFields] = useState<Fields>(initialFields);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const update =
     (key: keyof Fields) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
       setFields((prev) => ({ ...prev, [key]: e.target.value }));
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError(null);
+    setSending(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(fields),
+      });
+      const data = (await res.json().catch(() => ({}))) as {
+        error?: string;
+      };
+      if (!res.ok) {
+        throw new Error(data.error ?? "Could not send your message.");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again."
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   const reset = () => {
     setFields(initialFields);
     setSubmitted(false);
+    setError(null);
   };
 
   return (
@@ -95,7 +123,7 @@ export function ContactForm() {
             transition={{ duration: 0.35, ease }}
             onSubmit={handleSubmit}
             noValidate={false}
-            className="flex flex-col gap-5"
+            className="relative flex flex-col gap-5"
           >
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div className="flex flex-col gap-1.5">
@@ -198,8 +226,35 @@ export function ContactForm() {
               />
             </div>
 
-            <button type="submit" className="btn-primary mt-1 w-full">
-              Send Message
+            {/* Honeypot — hidden from users, catches bots. */}
+            <div className="absolute -left-[9999px]" aria-hidden>
+              <label htmlFor="website">Leave this field empty</label>
+              <input
+                id="website"
+                name="website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={fields.website}
+                onChange={update("website")}
+              />
+            </div>
+
+            {error && (
+              <p
+                role="alert"
+                className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-[14px] text-red-700"
+              >
+                {error}
+              </p>
+            )}
+
+            <button
+              type="submit"
+              disabled={sending}
+              className="btn-primary mt-1 w-full disabled:cursor-not-allowed disabled:opacity-70"
+            >
+              {sending ? "Sending…" : "Send Message"}
             </button>
           </motion.form>
         )}
