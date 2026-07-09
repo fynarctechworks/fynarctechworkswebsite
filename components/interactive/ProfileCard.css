@@ -254,6 +254,36 @@
   mix-blend-mode: normal;
 }
 
+.pc-holo-off .pc-content:not(.pc-avatar-content) {
+  mix-blend-mode: normal;
+}
+
+/* Solid white name/title (no gradient fill) for legibility over a photo. */
+.pc-holo-off .pc-details h3 {
+  font-size: min(4.5svh, 2.2em);
+  background-image: none;
+  -webkit-text-fill-color: currentColor;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(16, 20, 29, 0.55);
+}
+
+.pc-holo-off .pc-details p {
+  background-image: none;
+  -webkit-text-fill-color: currentColor;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 1px 12px rgba(16, 20, 29, 0.55);
+}
+
+/* Top scrim so the text reads over light photo areas. */
+.pc-avatar-full .pc-avatar-content::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(16, 20, 29, 0.6) 0%,
+    rgba(16, 20, 29, 0.25) 22%,
+    rgba(16, 20, 29, 0) 45%
+  );
+}
+
 /* Full-bleed avatar: cover the whole card with a gentle pointer parallax. */
 .pc-avatar-full .pc-avatar-content .avatar {
   top: 0;

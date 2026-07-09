@@ -16,13 +16,13 @@ export function FounderCard() {
     <div className="mx-auto w-full max-w-[360px]">
       <ProfileCard
         name={about.founder.name}
-        title={about.founder.role}
+        title="Founder & CEO"
         handle="fyn_arc_"
         status="FYN ARC Techworks"
         contactText="Contact"
         avatarUrl="/founder-avatar.png"
         showUserInfo
-        showDetails={false}
+        showDetails
         holoEnabled={false}
         avatarFull
         enableTilt
