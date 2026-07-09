@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { BorderGlowCard } from "@/components/interactive/BorderGlowCard";
 import { blog } from "@/lib/content";
 
 export const metadata = { title: "Blog" };
@@ -39,33 +40,38 @@ export default function BlogPage() {
           <Stagger className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {blog.posts.map((post) => (
               <StaggerItem key={post.slug} className="h-full">
-                <Link
-                  href={`/blogs/${post.slug}`}
-                  className="group flex h-full flex-col overflow-hidden rounded-card border border-ink/[0.07] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_18px_40px_-24px_rgba(16, 20, 29,0.35)]"
+                <BorderGlowCard
+                  className="h-full hover:-translate-y-1 transition-transform duration-300"
+                  innerClassName="overflow-hidden rounded-card"
                 >
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col p-6">
-                    <span className="text-xs font-medium uppercase tracking-wide text-ink/40">
-                      {post.date}
-                    </span>
-                    <h2 className="mt-2 line-clamp-2 text-lg font-semibold leading-snug tracking-tight text-ink">
-                      {post.title}
-                    </h2>
-                    <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-ink/60">
-                      {post.excerpt}
-                    </p>
-                    <span className="mt-5 inline-flex items-center gap-1.5 text-[15px] font-medium text-brand transition-transform duration-300 group-hover:gap-2.5">
-                      Read more <span aria-hidden>&rarr;</span>
-                    </span>
-                  </div>
-                </Link>
+                  <Link
+                    href={`/blogs/${post.slug}`}
+                    className="group flex h-full flex-col"
+                  >
+                    <div className="aspect-[16/10] overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <span className="text-xs font-medium uppercase tracking-wide text-ink/40">
+                        {post.date}
+                      </span>
+                      <h2 className="mt-2 line-clamp-2 text-lg font-semibold leading-snug tracking-tight text-ink">
+                        {post.title}
+                      </h2>
+                      <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                        {post.excerpt}
+                      </p>
+                      <span className="mt-5 inline-flex items-center gap-1.5 text-[15px] font-medium text-brand transition-transform duration-300 group-hover:gap-2.5">
+                        Read more <span aria-hidden>&rarr;</span>
+                      </span>
+                    </div>
+                  </Link>
+                </BorderGlowCard>
               </StaggerItem>
             ))}
           </Stagger>

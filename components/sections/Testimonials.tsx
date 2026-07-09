@@ -1,3 +1,4 @@
+import { BorderGlowCard } from "@/components/interactive/BorderGlowCard";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { testimonials } from "@/lib/content";
 
@@ -34,7 +35,10 @@ export function Testimonials() {
         <Stagger className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
           {testimonials.items.map((t) => (
             <StaggerItem key={t.name}>
-              <figure className="card flex h-full flex-col hover:-translate-y-1 hover:border-ink/15">
+              <BorderGlowCard
+                className="h-full hover:-translate-y-1 transition-transform duration-300"
+                innerClassName="flex h-full flex-col p-6"
+              >
                 <span
                   aria-hidden
                   className="font-display text-[56px] font-semibold leading-none text-brand"
@@ -53,7 +57,7 @@ export function Testimonials() {
                     <span className="text-sm text-ink/50">{t.role}</span>
                   </span>
                 </figcaption>
-              </figure>
+              </BorderGlowCard>
             </StaggerItem>
           ))}
         </Stagger>

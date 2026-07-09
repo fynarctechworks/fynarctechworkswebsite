@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { CountUp } from "@/components/motion/CountUp";
 import { whyChooseUs } from "@/lib/content";
-import { SpotlightCard } from "@/components/interactive/SpotlightCard";
+import { BorderGlowCard } from "@/components/interactive/BorderGlowCard";
 import { Magnetic } from "@/components/interactive/Magnetic";
 
 export function WhyChooseUs() {
@@ -35,7 +35,10 @@ export function WhyChooseUs() {
         <Stagger className="grid grid-cols-1 gap-4 sm:grid-cols-2" stagger={0.1}>
           {whyChooseUs.stats.map((stat) => (
             <StaggerItem key={stat.title}>
-              <SpotlightCard className="card h-full border-ink/[0.07] transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_16px_40px_-20px_rgba(16, 20, 29,0.35)]">
+              <BorderGlowCard
+                className="h-full hover:-translate-y-1 transition-transform duration-300"
+                innerClassName="p-6"
+              >
                 <div className="font-display text-[40px] font-semibold tracking-tight text-brand">
                   <CountUp to={stat.value} suffix={stat.suffix} />
                 </div>
@@ -43,7 +46,7 @@ export function WhyChooseUs() {
                 <p className="mt-1.5 text-sm leading-relaxed text-ink/60">
                   {stat.desc}
                 </p>
-              </SpotlightCard>
+              </BorderGlowCard>
             </StaggerItem>
           ))}
         </Stagger>

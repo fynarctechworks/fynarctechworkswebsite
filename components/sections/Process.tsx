@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { BorderGlowCard } from "@/components/interactive/BorderGlowCard";
 import { process } from "@/lib/content";
 
 export function Process() {
@@ -56,19 +57,21 @@ export function Process() {
 
           <Stagger className="relative grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {process.steps.map((step) => (
-              <StaggerItem
-                key={step.n}
-                className="group relative flex h-full flex-col rounded-card border border-ink/[0.07] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_18px_40px_-24px_rgba(16, 20, 29,0.35)] lg:ml-0"
-              >
-                <span className="font-display text-[56px] font-semibold leading-none tracking-[-0.03em] text-brand/20 transition-colors duration-300 group-hover:text-brand/40">
-                  {step.n}
-                </span>
-                <h3 className="mt-5 font-display text-lg font-semibold tracking-tight text-ink">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-ink/60">
-                  {step.desc}
-                </p>
+              <StaggerItem key={step.n} className="h-full">
+                <BorderGlowCard
+                  className="h-full transition-transform duration-300 hover:-translate-y-1"
+                  innerClassName="group relative flex h-full flex-col p-7"
+                >
+                  <span className="font-display text-[56px] font-semibold leading-none tracking-[-0.03em] text-brand/20 transition-colors duration-300 group-hover:text-brand/40">
+                    {step.n}
+                  </span>
+                  <h3 className="mt-5 font-display text-lg font-semibold tracking-tight text-ink">
+                    {step.title}
+                  </h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-ink/60">
+                    {step.desc}
+                  </p>
+                </BorderGlowCard>
               </StaggerItem>
             ))}
           </Stagger>

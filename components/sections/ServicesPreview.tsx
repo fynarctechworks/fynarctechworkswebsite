@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { services } from "@/lib/content";
-import { TiltCard } from "@/components/interactive/TiltCard";
+import { BorderGlowCard } from "@/components/interactive/BorderGlowCard";
 import { Magnetic } from "@/components/interactive/Magnetic";
 
 export function ServicesPreview() {
@@ -29,29 +29,30 @@ export function ServicesPreview() {
         <Stagger className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.items.map((service) => (
             <StaggerItem key={service.title} className="h-full">
-              <TiltCard className="h-full rounded-card">
-                <div className="flex h-full flex-col rounded-card border border-ink/[0.07] bg-white p-6 transition-colors duration-300 group-hover:border-brand/30 group-hover:shadow-[0_18px_40px_-24px_rgba(16, 20, 29,0.35)]">
-                  <h3 className="text-lg font-semibold tracking-tight text-ink">
-                    {service.title}
-                  </h3>
-                  <ul className="mt-5 space-y-3">
-                    {service.points.map((point) => (
-                      <li
-                        key={point}
-                        className="flex items-start gap-2.5 text-[15px] leading-snug text-ink/60"
+              <BorderGlowCard
+                className="h-full transition-transform duration-300 hover:-translate-y-1"
+                innerClassName="flex h-full flex-col p-6"
+              >
+                <h3 className="text-lg font-semibold tracking-tight text-ink">
+                  {service.title}
+                </h3>
+                <ul className="mt-5 space-y-3">
+                  {service.points.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-2.5 text-[15px] leading-snug text-ink/60"
+                    >
+                      <span
+                        aria-hidden
+                        className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand/10 text-[10px] font-bold text-brand"
                       >
-                        <span
-                          aria-hidden
-                          className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand/10 text-[10px] font-bold text-brand"
-                        >
-                          ✓
-                        </span>
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </TiltCard>
+                        ✓
+                      </span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </BorderGlowCard>
             </StaggerItem>
           ))}
         </Stagger>

@@ -1,3 +1,4 @@
+import { BorderGlowCard } from "@/components/interactive/BorderGlowCard";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { services, products } from "@/lib/content";
@@ -42,7 +43,10 @@ export default function FeaturePage() {
           <Stagger className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.items.map((service) => (
               <StaggerItem key={service.title} className="h-full">
-                <div className="group flex h-full flex-col rounded-card border border-ink/[0.07] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_18px_40px_-24px_rgba(16, 20, 29,0.35)]">
+                <BorderGlowCard
+                  className="h-full hover:-translate-y-1 transition-transform duration-300"
+                  innerClassName="flex h-full flex-col p-6"
+                >
                   <h3 className="text-lg font-semibold tracking-tight text-ink">
                     {service.title}
                   </h3>
@@ -62,7 +66,7 @@ export default function FeaturePage() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </BorderGlowCard>
               </StaggerItem>
             ))}
           </Stagger>
@@ -85,7 +89,10 @@ export default function FeaturePage() {
           <Stagger className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
             {products.items.map((product) => (
               <StaggerItem key={product.name} className="h-full">
-                <div className="group flex h-full flex-col rounded-card border border-ink/[0.07] bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_18px_40px_-24px_rgba(16, 20, 29,0.35)] md:p-10">
+                <BorderGlowCard
+                  className="h-full hover:-translate-y-1 transition-transform duration-300"
+                  innerClassName="flex h-full flex-col p-8 md:p-10"
+                >
                   <span
                     aria-hidden
                     className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand/10 text-[18px] font-bold text-brand"
@@ -98,7 +105,7 @@ export default function FeaturePage() {
                   <p className="mt-3 text-[16px] leading-relaxed text-ink/60">
                     {product.desc}
                   </p>
-                </div>
+                </BorderGlowCard>
               </StaggerItem>
             ))}
           </Stagger>
