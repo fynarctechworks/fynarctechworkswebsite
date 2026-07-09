@@ -68,6 +68,22 @@ body {
   animation: marquee 28s linear infinite;
 }
 
+/* Breathing glow for the floating products button */
+@keyframes float-glow {
+  0%,
+  100% {
+    opacity: 0.45;
+    filter: blur(8px);
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(12px);
+  }
+}
+.animate-float-glow {
+  animation: float-glow 2.8s ease-in-out infinite;
+}
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
