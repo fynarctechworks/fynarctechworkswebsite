@@ -37,6 +37,12 @@ const ProfileCardComponent = ({
   status = "Online",
   contactText = "Contact",
   showUserInfo = true,
+  // Toggle the rainbow holographic shine/glare layers (they wash out photos).
+  holoEnabled = true,
+  // Stretch the avatar to cover the whole card instead of bottom-anchored.
+  avatarFull = false,
+  // Show the big name/title text at the top of the card.
+  showDetails = true,
   onContactClick,
 }) => {
   const wrapRef = useRef(null);
@@ -312,14 +318,22 @@ const ProfileCardComponent = ({
     onContactClick?.();
   }, [onContactClick]);
 
+  const modifiers = [
+    className,
+    holoEnabled ? "" : "pc-holo-off",
+    avatarFull ? "pc-avatar-full" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <div ref={wrapRef} className={`pc-card-wrapper ${className}`.trim()} style={cardStyle}>
+    <div ref={wrapRef} className={`pc-card-wrapper ${modifiers}`.trim()} style={cardStyle}>
       {behindGlowEnabled && <div className="pc-behind" />}
       <div ref={shellRef} className="pc-card-shell">
         <section className="pc-card">
           <div className="pc-inside">
-            <div className="pc-shine" />
-            <div className="pc-glare" />
+            {holoEnabled && <div className="pc-shine" />}
+            {holoEnabled && <div className="pc-glare" />}
             <div className="pc-content pc-avatar-content">
               <img
                 className="avatar"
@@ -363,12 +377,14 @@ const ProfileCardComponent = ({
                 </div>
               )}
             </div>
-            <div className="pc-content">
-              <div className="pc-details">
-                <h3>{name}</h3>
-                <p>{title}</p>
+            {showDetails && (
+              <div className="pc-content">
+                <div className="pc-details">
+                  <h3>{name}</h3>
+                  <p>{title}</p>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </section>
       </div>

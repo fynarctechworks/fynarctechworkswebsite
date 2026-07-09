@@ -249,6 +249,27 @@
   backface-visibility: hidden;
 }
 
+/* Photo-first variant (holo off): show the photo in true color. */
+.pc-holo-off .pc-avatar-content {
+  mix-blend-mode: normal;
+}
+
+/* Full-bleed avatar: cover the whole card with a gentle pointer parallax. */
+.pc-avatar-full .pc-avatar-content .avatar {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(
+      calc((var(--pointer-from-left) - 0.5) * 8px),
+      calc((var(--pointer-from-top) - 0.5) * 8px)
+    )
+    scale(1.06);
+}
+
 .pc-avatar-content .avatar {
   width: 100%;
   position: absolute;

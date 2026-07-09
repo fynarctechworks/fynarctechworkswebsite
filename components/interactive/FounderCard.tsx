@@ -18,10 +18,13 @@ export function FounderCard() {
         name={about.founder.name}
         title={about.founder.role}
         handle="fyn_arc_"
-        status="Founder & CEO"
+        status="FYN ARC Techworks"
         contactText="Contact"
         avatarUrl="/founder-avatar.png"
         showUserInfo
+        showDetails={false}
+        holoEnabled={false}
+        avatarFull
         enableTilt
         enableMobileTilt={false}
         onContactClick={() => {
