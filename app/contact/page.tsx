@@ -80,7 +80,7 @@ export default function ContactPage() {
             </span>
           </Reveal>
           <Reveal delay={0.05}>
-            <h1 className="mt-6 max-w-3xl text-balance font-display text-[40px] font-semibold leading-[1.08] tracking-[-0.03em] text-ink md:text-[56px]">
+            <h1 className="mt-6 max-w-3xl text-balance font-display text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-ink md:text-[56px]">
               Let&rsquo;s Connect
             </h1>
           </Reveal>

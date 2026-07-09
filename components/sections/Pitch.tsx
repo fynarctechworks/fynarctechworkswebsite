@@ -21,7 +21,7 @@ function EmphasizedHeading({ text }: { text: string }) {
 
 export function Pitch() {
   return (
-    <section className="bg-white py-24 md:py-32">
+    <section className="bg-white py-16 md:py-32">
       <div className="container-x flex flex-col items-center text-center">
         <Reveal className="eyebrow">
           <span className="h-1.5 w-1.5 rounded-full bg-brand" />
@@ -29,7 +29,7 @@ export function Pitch() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <h2 className="mt-6 max-w-3xl text-balance font-display text-[36px] font-semibold leading-[1.1] tracking-[-0.03em] text-ink md:text-[52px]">
+          <h2 className="mt-6 max-w-3xl text-balance font-display text-[30px] font-semibold leading-[1.1] tracking-[-0.03em] text-ink md:text-[52px]">
             <EmphasizedHeading text={pitch.h2} />
           </h2>
         </Reveal>

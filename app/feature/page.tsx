@@ -18,13 +18,13 @@ export default function FeaturePage() {
               "radial-gradient(60% 50% at 50% 0%, rgba(16, 20, 29,0.12) 0%, rgba(16, 20, 29,0) 70%)",
           }}
         />
-        <div className="container-x flex flex-col items-center pb-20 pt-20 text-center md:pt-28">
+        <div className="container-x flex flex-col items-center pb-14 pt-16 text-center md:pt-28">
           <Reveal className="flex flex-col items-center">
             <div className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               Services
             </div>
-            <h1 className="mt-6 max-w-4xl text-balance font-display text-[40px] font-semibold leading-[1.08] tracking-[-0.03em] text-ink md:text-[64px]">
+            <h1 className="mt-6 max-w-4xl text-balance font-display text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-ink md:text-[64px]">
               Our Services
             </h1>
             <p className="mt-6 max-w-2xl text-[18px] font-medium leading-snug text-ink/80 md:text-[20px]">
@@ -38,7 +38,7 @@ export default function FeaturePage() {
       </section>
 
       {/* 2. Full services grid */}
-      <section className="bg-white pb-24 md:pb-32">
+      <section className="bg-white pb-16 md:pb-32">
         <div className="container-x">
           <Stagger className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.items.map((service) => (

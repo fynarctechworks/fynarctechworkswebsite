@@ -7,7 +7,7 @@ import { Magnetic } from "@/components/interactive/Magnetic";
 
 export function WhyChooseUs() {
   return (
-    <section className="bg-mist py-24 md:py-32">
+    <section className="bg-mist py-16 md:py-32">
       <div className="container-x grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
         {/* Left: intro + CTA */}
         <Reveal className="max-w-xl">
@@ -16,7 +16,7 @@ export function WhyChooseUs() {
             {whyChooseUs.h2}
           </span>
 
-          <h2 className="mt-6 text-balance font-display text-[36px] font-semibold leading-[1.12] tracking-[-0.02em] text-ink md:text-[44px]">
+          <h2 className="mt-6 text-balance font-display text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-ink md:text-[44px]">
             {whyChooseUs.tagline}
           </h2>
 

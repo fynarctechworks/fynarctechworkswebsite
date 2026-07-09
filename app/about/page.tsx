@@ -29,13 +29,13 @@ export default function AboutPage() {
               "radial-gradient(60% 50% at 50% 0%, rgba(16, 20, 29,0.12) 0%, rgba(16, 20, 29,0) 70%)",
           }}
         />
-        <div className="container-x flex flex-col items-center pb-20 pt-20 text-center md:pt-28">
+        <div className="container-x flex flex-col items-center pb-14 pt-16 text-center md:pt-28">
           <Reveal className="flex flex-col items-center">
             <div className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               {about.hero.eyebrow}
             </div>
-            <h1 className="mt-6 max-w-4xl text-balance font-display text-[40px] font-semibold leading-[1.08] tracking-[-0.03em] text-ink md:text-[64px]">
+            <h1 className="mt-6 max-w-4xl text-balance font-display text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-ink md:text-[64px]">
               {about.hero.h1}
             </h1>
             <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-ink/60 md:text-[19px]">
@@ -46,14 +46,14 @@ export default function AboutPage() {
       </section>
 
       {/* 2. Mission */}
-      <section className="bg-mist py-24 md:py-32">
+      <section className="bg-mist py-16 md:py-32">
         <div className="container-x grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
           <Reveal>
             <span className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               {about.mission.title}
             </span>
-            <h2 className="mt-6 text-balance font-display text-[36px] font-semibold leading-[1.12] tracking-[-0.02em] text-ink md:text-[44px]">
+            <h2 className="mt-6 text-balance font-display text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-ink md:text-[44px]">
               {about.mission.title}
             </h2>
           </Reveal>
@@ -66,14 +66,14 @@ export default function AboutPage() {
       </section>
 
       {/* 3. Values */}
-      <section className="bg-white py-24 md:py-32">
+      <section className="bg-white py-16 md:py-32">
         <div className="container-x">
           <Reveal className="mx-auto flex max-w-2xl flex-col items-center text-center">
             <div className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               {about.values.title}
             </div>
-            <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
+            <h2 className="mt-6 font-display text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
               What we stand for
             </h2>
             <p className="mt-5 text-[17px] leading-relaxed text-ink/60">
@@ -103,7 +103,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. Founder */}
-      <section className="bg-mist py-24 md:py-32">
+      <section className="bg-mist py-16 md:py-32">
         <div className="container-x">
           <Reveal className="mx-auto max-w-2xl text-center">
             <div className="eyebrow mx-auto">
@@ -147,14 +147,14 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Team */}
-      <section className="bg-white py-24 md:py-32">
+      <section className="bg-white py-16 md:py-32">
         <div className="container-x">
           <Reveal className="mx-auto flex max-w-2xl flex-col items-center text-center">
             <div className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               Our Team
             </div>
-            <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
+            <h2 className="mt-6 font-display text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
               {about.team.title}
             </h2>
           </Reveal>
@@ -183,14 +183,14 @@ export default function AboutPage() {
       </section>
 
       {/* 6. Roadmap */}
-      <section className="bg-mist py-24 md:py-32">
+      <section className="bg-mist py-16 md:py-32">
         <div className="container-x">
           <Reveal className="mx-auto flex max-w-2xl flex-col items-center text-center">
             <div className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               Roadmap
             </div>
-            <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
+            <h2 className="mt-6 font-display text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
               {about.roadmap.title}
             </h2>
             <p className="mt-5 text-[17px] leading-relaxed text-ink/60">

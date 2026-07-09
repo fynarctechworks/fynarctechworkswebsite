@@ -33,7 +33,7 @@ export function Hero() {
             "radial-gradient(60% 50% at 50% 0%, rgba(16, 20, 29,0.12) 0%, rgba(16, 20, 29,0) 70%)",
         }}
       />
-      <div className="container-x flex flex-col items-center pb-20 pt-20 text-center md:pt-28">
+      <div className="container-x flex flex-col items-center pb-14 pt-16 text-center md:pt-28">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.05, ease }}
-          className="mt-6 max-w-4xl text-balance font-display text-[40px] font-semibold leading-[1.08] tracking-[-0.03em] text-ink md:text-[64px]"
+          className="mt-6 max-w-4xl text-balance font-display text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-ink md:text-[64px]"
         >
           {hero.h1}
         </motion.h1>

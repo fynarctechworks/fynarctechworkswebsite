@@ -8,14 +8,14 @@ import { Magnetic } from "@/components/interactive/Magnetic";
 
 export function ServicesPreview() {
   return (
-    <section className="bg-mist py-24 md:py-32">
+    <section className="bg-mist py-16 md:py-32">
       <div className="container-x">
         <Reveal className="mx-auto flex max-w-2xl flex-col items-center text-center">
           <div className="eyebrow">
             <span className="h-1.5 w-1.5 rounded-full bg-brand" />
             Services
           </div>
-          <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
+          <h2 className="mt-6 font-display text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
             {services.h2}
           </h2>
           <p className="mt-5 text-[18px] font-medium leading-snug text-ink/80">

@@ -6,7 +6,7 @@ import { FluidGlassHero } from "@/components/interactive/FluidGlassHero";
 
 export function FinalCTA() {
   return (
-    <section className="bg-white py-24 md:py-32">
+    <section className="bg-white py-16 md:py-32">
       <div className="container-x">
         <div className="relative overflow-hidden rounded-card bg-ink text-white">
           {/* WebGL FluidGlass lens fills the panel — it refracts a colorful glow
@@ -27,10 +27,10 @@ export function FinalCTA() {
                 <span className="h-1.5 w-1.5 rounded-full bg-white" />
                 {finalCta.subheading}
               </span>
-              <h2 className="mt-6 font-display text-[40px] font-semibold leading-[1.08] tracking-[-0.03em] text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.55)] md:text-[56px]">
+              <h2 className="mt-6 font-display text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.55)] md:text-[56px]">
                 {finalCta.h2}
               </h2>
-              <p className="mt-6 max-w-3xl font-display text-[22px] italic leading-relaxed text-white/90 drop-shadow-[0_2px_16px_rgba(0,0,0,0.55)] md:text-[26px]">
+              <p className="mt-6 max-w-3xl font-display text-[19px] italic leading-relaxed text-white/90 drop-shadow-[0_2px_16px_rgba(0,0,0,0.55)] md:text-[26px]">
                 &ldquo;{finalCta.quote}&rdquo;
               </p>
               <p className="mt-5 text-sm text-white/70">{finalCta.attribution}</p>

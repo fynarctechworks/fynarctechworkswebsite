@@ -14,14 +14,14 @@ function initials(name: string): string {
 
 export function Testimonials() {
   return (
-    <section className="bg-white py-24 md:py-32">
+    <section className="bg-white py-16 md:py-32">
       <div className="container-x">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">
             <span className="h-1.5 w-1.5 rounded-full bg-brand" />
             Testimonials
           </span>
-          <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
+          <h2 className="mt-6 font-display text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
             {testimonials.h2}
           </h2>
           <p className="mt-4 text-[17px] font-medium text-ink/80">

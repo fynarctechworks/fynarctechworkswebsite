@@ -17,14 +17,14 @@ export function Process() {
   const fill = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="bg-white py-24 md:py-32">
+    <section className="bg-white py-16 md:py-32">
       <div className="container-x">
         <Reveal className="mx-auto flex max-w-2xl flex-col items-center text-center">
           <div className="eyebrow">
             <span className="h-1.5 w-1.5 rounded-full bg-brand" />
             {process.h2}
           </div>
-          <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
+          <h2 className="mt-6 font-display text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
             {process.subheading}
           </h2>
           <p className="mt-5 text-[17px] leading-relaxed text-ink/60">

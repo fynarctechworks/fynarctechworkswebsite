@@ -15,6 +15,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* BorderGlow's outer glow extends past edge cards; clip so it never causes
+     horizontal scroll on small screens. */
+  overflow-x: clip;
 }
 
 body {

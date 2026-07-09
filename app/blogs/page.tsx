@@ -24,7 +24,7 @@ export default function BlogPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               Blog
             </div>
-            <h1 className="mt-6 font-display text-[40px] font-semibold leading-[1.08] tracking-[-0.03em] text-ink md:text-[56px]">
+            <h1 className="mt-6 font-display text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-ink md:text-[56px]">
               {blog.h1}
             </h1>
             <p className="mt-5 text-[17px] leading-relaxed text-ink/60 md:text-[19px]">
@@ -35,7 +35,7 @@ export default function BlogPage() {
       </section>
 
       {/* Posts grid */}
-      <section className="pb-24 md:pb-32">
+      <section className="pb-16 md:pb-32">
         <div className="container-x">
           <Stagger className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {blog.posts.map((post) => (
