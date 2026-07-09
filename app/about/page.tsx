@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { FounderCard } from "@/components/interactive/FounderCard";
+import { BorderGlowCard } from "@/components/interactive/BorderGlowCard";
 import { about } from "@/lib/content";
 
 export const metadata: Metadata = { title: "About" };
@@ -83,16 +84,18 @@ export default function AboutPage() {
 
           <Stagger className="mt-16 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-2">
             {about.values.items.map((item) => (
-              <StaggerItem
-                key={item.title}
-                className="card group h-full hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_18px_40px_-24px_rgba(16, 20, 29,0.35)]"
-              >
-                <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-ink/60">
-                  {item.desc}
-                </p>
+              <StaggerItem key={item.title} className="h-full">
+                <BorderGlowCard
+                  className="h-full transition-transform duration-300 hover:-translate-y-1"
+                  innerClassName="group p-6"
+                >
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-ink/60">
+                    {item.desc}
+                  </p>
+                </BorderGlowCard>
               </StaggerItem>
             ))}
           </Stagger>
@@ -158,19 +161,21 @@ export default function AboutPage() {
 
           <Stagger className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 md:mt-20 lg:grid-cols-4">
             {about.team.members.map((member) => (
-              <StaggerItem
-                key={member.name}
-                className="card group flex h-full flex-col items-center text-center hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_18px_40px_-24px_rgba(16, 20, 29,0.35)]"
-              >
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand/10 font-display text-lg font-semibold tracking-tight text-brand">
-                  {initials(member.name)}
-                </div>
-                <h3 className="mt-5 font-display text-base font-semibold tracking-tight text-ink">
-                  {member.name}
-                </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-ink/60">
-                  {member.role}
-                </p>
+              <StaggerItem key={member.name} className="h-full">
+                <BorderGlowCard
+                  className="h-full transition-transform duration-300 hover:-translate-y-1"
+                  innerClassName="group flex h-full flex-col items-center p-6 text-center"
+                >
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand/10 font-display text-lg font-semibold tracking-tight text-brand">
+                    {initials(member.name)}
+                  </div>
+                  <h3 className="mt-5 font-display text-base font-semibold tracking-tight text-ink">
+                    {member.name}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-ink/60">
+                    {member.role}
+                  </p>
+                </BorderGlowCard>
               </StaggerItem>
             ))}
           </Stagger>
@@ -205,7 +210,10 @@ export default function AboutPage() {
                   <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand font-display text-[15px] font-semibold text-white md:h-12 md:w-12 md:text-base">
                     {i + 1}
                   </div>
-                  <div className="flex-1 rounded-card border border-ink/[0.07] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_18px_40px_-24px_rgba(16, 20, 29,0.35)]">
+                  <BorderGlowCard
+                    className="flex-1 transition-transform duration-300 hover:-translate-y-1"
+                    innerClassName="p-6"
+                  >
                     <div className="text-[13px] font-medium uppercase tracking-wide text-brand">
                       {phase.n}
                     </div>
@@ -215,7 +223,7 @@ export default function AboutPage() {
                     <p className="mt-2 text-[15px] leading-relaxed text-ink/60">
                       {phase.desc}
                     </p>
-                  </div>
+                  </BorderGlowCard>
                 </StaggerItem>
               ))}
             </div>
