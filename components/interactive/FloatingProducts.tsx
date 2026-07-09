@@ -20,7 +20,7 @@ export function FloatingProducts() {
         rel="noopener noreferrer"
         className="group block transition-transform duration-300 hover:-translate-y-0.5"
       >
-        <ElectricBorder color="#4c6ef5" speed={1} chaos={0.12} borderRadius={999}>
+        <ElectricBorder color="#6948E5" speed={1} chaos={0.12} borderRadius={999}>
           <span className="relative inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-[15px] font-medium text-white">
             {products.cta}
             <svg
