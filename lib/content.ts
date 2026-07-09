@@ -3,7 +3,9 @@
 
 export const site = {
   name: "FYN ARC Techworks",
-  domain: "https://www.fynarctechworks.com",
+  // Apex is the primary domain on Vercel (www 307-redirects to it), so meta
+  // URLs must use it to avoid redirecting link-preview scrapers.
+  domain: "https://fynarctechworks.com",
   founder: "Ajay Satya Murthy",
   founderRole: "Founder & CEO",
   location: "Visakhapatnam, Andhra Pradesh",
