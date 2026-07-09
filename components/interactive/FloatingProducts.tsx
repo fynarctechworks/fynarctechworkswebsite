@@ -12,7 +12,7 @@ export function FloatingProducts() {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed bottom-4 right-4 z-40 sm:bottom-6 sm:right-6"
+      className="fixed bottom-6 right-6 z-40"
     >
       <a
         href={products.url}
