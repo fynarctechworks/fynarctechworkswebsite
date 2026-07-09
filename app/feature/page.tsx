@@ -1,8 +1,7 @@
 import { BorderGlowCard } from "@/components/interactive/BorderGlowCard";
-import { Magnetic } from "@/components/interactive/Magnetic";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { services, products } from "@/lib/content";
+import { services } from "@/lib/content";
 
 export const metadata = { title: "Services" };
 
@@ -74,35 +73,7 @@ export default function FeaturePage() {
         </div>
       </section>
 
-      {/* 3. Products */}
-      <section className="bg-mist py-24 md:py-32">
-        <div className="container-x">
-          <Reveal className="mx-auto flex max-w-2xl flex-col items-center text-center">
-            <div className="eyebrow">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand" />
-              Products
-            </div>
-            <h2 className="mt-6 font-display text-[36px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-[44px]">
-              {products.h2}
-            </h2>
-          </Reveal>
-
-          <Reveal delay={0.1} className="mt-12 flex justify-center">
-            <Magnetic>
-              <a
-                href={products.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                {products.cta}
-              </a>
-            </Magnetic>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 4. Final CTA */}
+      {/* 3. Final CTA */}
       <FinalCTA />
     </>
   );
