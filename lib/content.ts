@@ -20,7 +20,7 @@ export const site = {
   },
   metaDescription:
     "FYN ARC Techworks helps you design, build, and automate with ease. From modern websites and mobile apps to AI chatbots and digital tools.",
-  ogImage: "/og/og-image.png",
+  ogImage: "/og/og-hero.png",
   favicon: "/fynarc_logo_mark.png",
 };
 
