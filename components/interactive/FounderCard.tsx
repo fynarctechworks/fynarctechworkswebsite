@@ -13,7 +13,7 @@ const ProfileCard = dynamic(() => import("./ProfileCard"), {
 
 export function FounderCard() {
   return (
-    <div className="mx-auto w-full max-w-[360px]">
+    <div className="mx-auto flex w-full max-w-[360px] justify-center">
       <ProfileCard
         name={about.founder.name}
         title="Founder & CEO"
