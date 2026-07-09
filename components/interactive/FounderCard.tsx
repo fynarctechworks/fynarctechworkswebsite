@@ -22,7 +22,7 @@ export function FounderCard() {
         contactText="Contact"
         avatarUrl="/founder-avatar.png"
         showUserInfo
-        showDetails
+        showDetails={false}
         holoEnabled={false}
         avatarFull
         enableTilt
