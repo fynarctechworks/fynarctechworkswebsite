@@ -12,8 +12,8 @@ export const site = {
   phone: "+91 9849861318",
   phoneHref: "tel:+919849861318",
   socials: {
-    whatsapp: "https://wa.link/9v2kam",
-    instagram: "https://www.instagram.com/fyn_arc_techworks/",
+    whatsapp: "https://wa.link/liw0gs",
+    instagram: "https://www.instagram.com/fyn_arc_techworks_pvt_ltd",
     linkedin: "https://www.linkedin.com/in/sambanaajaysatyamurthy/",
     x: "https://x.com/fyn_arc_",
     facebook: "https://www.facebook.com/profile.php?id=61582851063914",

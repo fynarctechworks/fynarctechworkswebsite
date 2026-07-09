@@ -5,8 +5,6 @@ import { nav, site } from "@/lib/content";
 const socials = [
   { label: "LinkedIn", href: site.socials.linkedin },
   { label: "Instagram", href: site.socials.instagram },
-  { label: "X", href: site.socials.x },
-  { label: "Facebook", href: site.socials.facebook },
   { label: "WhatsApp", href: site.socials.whatsapp },
 ];
 
