@@ -17,8 +17,8 @@ export function FounderCard() {
       <ProfileCard
         name={about.founder.name}
         title="Founder & CEO"
-        handle="fyn_arc_"
-        status="FYN ARC Techworks"
+        handle={about.founder.name}
+        status="Founder & CEO"
         contactText="Contact"
         avatarUrl="/founder-avatar.png"
         showUserInfo
