@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { FounderCard } from "@/components/interactive/FounderCard";
 import { about } from "@/lib/content";
 
 export const metadata: Metadata = { title: "About" };
@@ -108,20 +109,21 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={0.1} className="mt-10">
-            <div className="relative overflow-hidden rounded-card border border-ink/[0.07] bg-ink px-6 py-14 text-white md:px-16 md:py-16">
+            <div className="relative overflow-hidden rounded-card border border-white/10 bg-ink px-6 py-14 text-white md:px-12 md:py-16 lg:px-16">
               <div
                 aria-hidden
                 className="pointer-events-none absolute inset-0"
                 style={{
                   background:
-                    "radial-gradient(55% 60% at 50% 0%, rgba(255, 255, 255,0.08) 0%, rgba(255, 255, 255,0) 70%)",
+                    "radial-gradient(55% 60% at 50% 0%, rgba(255, 255, 255,0.06) 0%, rgba(255, 255, 255,0) 70%)",
                 }}
               />
-              <div className="relative flex flex-col items-center gap-8 text-center md:flex-row md:items-center md:gap-10 md:text-left">
-                <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-white font-display text-[32px] font-semibold tracking-tight text-ink">
-                  {initials(about.founder.name)}
-                </div>
-                <div>
+              <div className="relative grid grid-cols-1 items-center gap-10 md:grid-cols-[minmax(0,360px)_1fr] md:gap-14">
+                {/* Holographic ProfileCard */}
+                <FounderCard />
+
+                {/* Founder copy */}
+                <div className="text-center md:text-left">
                   <h2 className="font-display text-[28px] font-semibold leading-tight tracking-[-0.02em] text-white md:text-[36px]">
                     {about.founder.title}
                   </h2>
