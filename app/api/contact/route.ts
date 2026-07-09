@@ -59,7 +59,7 @@ export async function POST(request: Request) {
   const resend = new Resend(apiKey);
 
   const html = `
-    <h2>New contact enquiry — FYN ARC Techworks</h2>
+    <h2>New contact enquiry from the FYN ARC Techworks website</h2>
     <p><strong>Name:</strong> ${escapeHtml(data.name)}</p>
     <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
     ${data.company ? `<p><strong>Company:</strong> ${escapeHtml(data.company)}</p>` : ""}

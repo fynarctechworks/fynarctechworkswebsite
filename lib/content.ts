@@ -34,7 +34,7 @@ export const nav = [
 export const hero = {
   h1: "Designing moments that connect people and technology",
   body:
-    "At FYN ARC Techworks, we turn imagination into digital reality. From crafting smooth designs to building smart systems that think for you — we make technology feel simple, human, and powerful.",
+    "At FYN ARC Techworks, we turn imagination into digital reality. From crafting smooth designs to building smart systems that think for you, we make technology feel simple, human, and powerful.",
   primaryCta: { label: "Get Started", href: "/contact" },
   secondaryCta: { label: "Browse Features", href: "/feature" },
   stats: [
@@ -47,21 +47,21 @@ export const hero = {
 export const pitch = {
   h2: "Think It. Build It. Launch It.",
   body:
-    "We believe every idea deserves a real chance to grow. Whether you're sketching your first design, planning your next big app, or exploring AI for the first time, we're here to help you make it happen. No limits, no pressure — just a space where creativity meets clarity and ideas turn into things that truly work.",
+    "We believe every idea deserves a real chance to grow. Whether you're sketching your first design, planning your next big app, or exploring AI for the first time, we're here to help you make it happen. No limits, no pressure, just a space where creativity meets clarity and ideas turn into things that truly work.",
 };
 
 export const whyChooseUs = {
   h2: "Why Choose Us",
-  tagline: "You bring the idea. We bring it to life — smarter, faster, and better.",
+  tagline: "You bring the idea. We bring it to life smarter, faster, and better.",
   body:
-    "At FYN ARC, creativity meets logic to create tech that actually makes sense. Our team listens, experiments, and delivers — not because it's our job, but because we love what we do.",
+    "At FYN ARC, creativity meets logic to create tech that actually makes sense. Our team listens, experiments, and delivers, not because it's our job but because we love what we do.",
   cta: { label: "Get to Know Us", href: "/about" },
   stats: [
     {
       value: 98,
       suffix: "%",
       title: "Client Satisfaction",
-      desc: "98% satisfaction through transparency, timely delivery, and collaboration — ensuring measurable results.",
+      desc: "98% satisfaction through transparency, timely delivery, and collaboration, ensuring measurable results.",
     },
     {
       value: 3,
@@ -88,27 +88,27 @@ export const process = {
   h2: "Our Process",
   subheading: "Turning Thoughts into Real Things",
   body:
-    "Every project we work on follows an easy flow that helps us stay connected, focused, and fast. No confusion, no rush — just steady progress and honest collaboration.",
+    "Every project we work on follows an easy flow that helps us stay connected, focused, and fast. No confusion, no rush, just steady progress and honest collaboration.",
   steps: [
     {
       n: "01",
       title: "Discover & Understand",
-      desc: "We start by listening. We dive into your ideas, explore what you're aiming for, and understand what really matters. This step helps us build a foundation that actually fits your vision — not just the trend.",
+      desc: "We start by listening. We dive into your ideas, explore what you're aiming for, and understand what really matters. This step helps us build a foundation that actually fits your vision, not just the trend.",
     },
     {
       n: "02",
       title: "Design & Plan",
-      desc: "Here's where the magic begins. We sketch, design, and plan solutions that feel right — not just on paper, but in purpose. Every color, feature, and function has meaning.",
+      desc: "Here's where the magic begins. We sketch, design, and plan solutions that feel right, not just on paper but in purpose. Every color, feature, and function has meaning.",
     },
     {
       n: "03",
       title: "Build & Connect",
-      desc: "Once the plan feels perfect, we bring it to life. We design, develop, and connect everything — making sure it all works smoothly and feels effortless.",
+      desc: "Once the plan feels perfect, we bring it to life. We design, develop, and connect everything, making sure it all works smoothly and feels effortless.",
     },
     {
       n: "04",
       title: "Refine & Grow",
-      desc: "We don't stop at 'done.' We track, tweak, and improve your project as it evolves — helping it grow stronger with every update.",
+      desc: "We don't stop at 'done.' We track, tweak, and improve your project as it evolves, helping it grow stronger with every update.",
     },
   ],
 };
@@ -197,7 +197,7 @@ export const testimonials = {
   h2: "What People Say About Us",
   subheading: "Real Stories. Real Results. Real People.",
   intro:
-    "At FYN ARC Techworks, we believe the best feedback doesn't come from numbers — it comes from people. Here's what some of them had to say.",
+    "At FYN ARC Techworks, we believe the best feedback doesn't come from numbers. It comes from people. Here's what some of them had to say.",
   items: [
     {
       name: "Ramesh Prasad",
@@ -228,7 +228,7 @@ export const faq = {
   items: [
     {
       q: "What kind of projects do you work on?",
-      a: "We work across web development, mobile apps, AI chatbots, automation, UI/UX design, and digital tooling — from first-time ideas to full product builds.",
+      a: "We work across web development, mobile apps, AI chatbots, automation, UI/UX design, and digital tooling, from first-time ideas to full product builds.",
     },
     {
       q: "What if I don't know exactly what I want yet?",
@@ -240,7 +240,7 @@ export const faq = {
     },
     {
       q: "Do you build websites from scratch or use platforms like WordPress?",
-      a: "Both. We choose the approach that fits your goals — custom-coded builds for performance and flexibility, or established platforms when they're the smarter fit.",
+      a: "Both. We choose the approach that fits your goals: custom-coded builds for performance and flexibility, or established platforms when they're the smarter fit.",
     },
     {
       q: "Can you design mobile apps too?",
@@ -248,11 +248,11 @@ export const faq = {
     },
     {
       q: "How long does it take to complete a project?",
-      a: "It depends on scope. After discovery we give you a clear timeline — most projects move quickly thanks to our streamlined process.",
+      a: "It depends on scope. After discovery we give you a clear timeline. Most projects move quickly thanks to our streamlined process.",
     },
     {
       q: "Do you provide ongoing support after the project is done?",
-      a: "Absolutely. We track, tweak, and improve your project as it evolves — more than 20 companies have stayed with us beyond two years.",
+      a: "Absolutely. We track, tweak, and improve your project as it evolves. More than 20 companies have stayed with us beyond two years.",
     },
     {
       q: "Can I customize the design completely?",
@@ -286,7 +286,7 @@ export const about = {
   mission: {
     title: "Our Mission",
     body:
-      "To empower modern businesses with intuitive, AI-driven tools and seamless web experiences — simplifying operations, accelerating growth, and delivering measurable value.",
+      "To empower modern businesses with intuitive, AI-driven tools and seamless web experiences, simplifying operations, accelerating growth, and delivering measurable value.",
   },
   values: {
     title: "Our Values",
@@ -297,11 +297,11 @@ export const about = {
       },
       {
         title: "Human-first technology",
-        desc: "Advanced tech should feel accessible and practical — built for the people who use it.",
+        desc: "Advanced tech should feel accessible and practical, built for the people who use it.",
       },
       {
         title: "Honest collaboration",
-        desc: "We listen, experiment, and build alongside you — steady progress over empty promises.",
+        desc: "We listen, experiment, and build alongside you. Steady progress over empty promises.",
       },
       {
         title: "Measurable value",
@@ -313,7 +313,7 @@ export const about = {
     title: "Meet the Founder: Vision Led by Purpose",
     name: "Ajay Satya Murthy",
     role: "Founder & CEO",
-    bio: "Ajay founded FYN ARC Techworks to make advanced technology feel accessible, practical, and human — removing friction and enabling teams to work with confidence.",
+    bio: "Ajay founded FYN ARC Techworks to make advanced technology feel accessible, practical, and human by removing friction and enabling teams to work with confidence.",
   },
   team: {
     title: "Meet the Team: The People Behind the Innovation",
@@ -329,7 +329,7 @@ export const about = {
     subtitle: "Strategic Digital & Creative Foundations",
     phases: [
       { n: "Phase 1", title: "Creative Foundations", desc: "Establishing brand, design language, and the systems that scale." },
-      { n: "Phase 2", title: "Product Craft", desc: "Refining flagship products — Inspect Pro and GymDesk — for real-world use." },
+      { n: "Phase 2", title: "Product Craft", desc: "Refining our flagship products, Inspect Pro and GymDesk, for real-world use." },
       { n: "Phase 3", title: "AI & Automation", desc: "Deepening our AI tooling to give clients a durable efficiency edge." },
       { n: "Phase 4", title: "Scalable Frameworks", desc: "Reusable design and engineering frameworks for faster delivery." },
       { n: "Phase 5", title: "Partnership Growth", desc: "Growing long-term partnerships and expanding the team behind them." },

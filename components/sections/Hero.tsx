@@ -41,7 +41,7 @@ export function Hero() {
           className="eyebrow"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-brand" />
-          Web · AI · Design — all in one place
+          Web · AI · Design, all in one place
         </motion.div>
 
         <motion.h1

@@ -31,7 +31,7 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-white/60">
-            We turn imagination into digital reality — from smooth designs to
+            We turn imagination into digital reality, from smooth designs to
             smart systems that think for you.
           </p>
           <p className="mt-4 text-[14px] text-white/50">{site.location}</p>
