@@ -181,6 +181,8 @@ export const services = {
 
 export const products = {
   h2: "Products We Build",
+  url: "https://infynarc.com/",
+  cta: "Browse Our Products",
   items: [
     {
       name: "Inspect Pro",

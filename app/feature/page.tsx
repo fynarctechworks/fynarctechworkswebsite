@@ -1,4 +1,5 @@
 import { BorderGlowCard } from "@/components/interactive/BorderGlowCard";
+import { Magnetic } from "@/components/interactive/Magnetic";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { services, products } from "@/lib/content";
@@ -86,29 +87,18 @@ export default function FeaturePage() {
             </h2>
           </Reveal>
 
-          <Stagger className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
-            {products.items.map((product) => (
-              <StaggerItem key={product.name} className="h-full">
-                <BorderGlowCard
-                  className="h-full hover:-translate-y-1 transition-transform duration-300"
-                  innerClassName="flex h-full flex-col p-8 md:p-10"
-                >
-                  <span
-                    aria-hidden
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand/10 text-[18px] font-bold text-brand"
-                  >
-                    {product.name.charAt(0)}
-                  </span>
-                  <h3 className="mt-6 font-display text-[26px] font-semibold tracking-[-0.02em] text-ink md:text-[30px]">
-                    {product.name}
-                  </h3>
-                  <p className="mt-3 text-[16px] leading-relaxed text-ink/60">
-                    {product.desc}
-                  </p>
-                </BorderGlowCard>
-              </StaggerItem>
-            ))}
-          </Stagger>
+          <Reveal delay={0.1} className="mt-12 flex justify-center">
+            <Magnetic>
+              <a
+                href={products.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                {products.cta}
+              </a>
+            </Magnetic>
+          </Reveal>
         </div>
       </section>
 
