@@ -28,7 +28,7 @@ export const site = {
 
 export const nav = [
   { label: "About", href: "/about" },
-  { label: "Services", href: "/feature" },
+  { label: "Services", href: "/services" },
   { label: "Blog", href: "/blogs" },
   { label: "Contact", href: "/contact" },
 ];
@@ -38,7 +38,7 @@ export const hero = {
   body:
     "At FYN ARC Techworks, we turn imagination into digital reality. From crafting smooth designs to building smart systems that think for you, we make technology feel simple, human, and powerful.",
   primaryCta: { label: "Get Started", href: "/contact" },
-  secondaryCta: { label: "Browse Features", href: "/feature" },
+  secondaryCta: { label: "Browse Features", href: "/services" },
   stats: [
     { value: 98, suffix: "%", label: "Client Satisfaction Rate" },
     { value: 3, suffix: "X", label: "Faster Decision-Making" },
@@ -276,7 +276,7 @@ export const finalCta = {
     "At FYN ARC, we care about what you want to create. We're a team that experiments, learns, and builds things that actually make life a little easier.",
   attribution: "Ajay Satya Murthy, Founder & CEO of FYN ARC Techworks",
   primaryCta: { label: "Get Started Now", href: "/contact" },
-  secondaryCta: { label: "Browse Features", href: "/feature" },
+  secondaryCta: { label: "Browse Features", href: "/services" },
 };
 
 // ---- About page ----

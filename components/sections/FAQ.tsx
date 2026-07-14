@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Reveal } from "@/components/motion/Reveal";
 import { faq } from "@/lib/content";
 
@@ -68,21 +68,18 @@ export function FAQ() {
                       </svg>
                     </span>
                   </button>
-                  <AnimatePresence initial={false}>
-                    {open && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease }}
-                        className="overflow-hidden"
-                      >
-                        <p className="px-6 pb-5 text-[15px] leading-relaxed text-ink/60">
-                          {item.a}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  {/* Answer stays in the DOM (height-animated, not unmounted)
+                      so crawlers index every answer. */}
+                  <motion.div
+                    initial={false}
+                    animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
+                    transition={{ duration: 0.3, ease }}
+                    className="overflow-hidden"
+                  >
+                    <p className="px-6 pb-5 text-[15px] leading-relaxed text-ink/60">
+                      {item.a}
+                    </p>
+                  </motion.div>
                 </div>
               );
             })}

@@ -5,7 +5,19 @@ import { FounderCard } from "@/components/interactive/FounderCard";
 import { BorderGlowCard } from "@/components/interactive/BorderGlowCard";
 import { about } from "@/lib/content";
 
-export const metadata: Metadata = { title: "About" };
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Meet FYN ARC Techworks: our mission, values, founder Ajay Satya Murthy, and the team building intuitive AI-driven tools and seamless web experiences from Visakhapatnam.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About | FYN ARC Techworks",
+    description:
+      "Our mission, values, founder, and the team building intuitive AI-driven tools and seamless web experiences.",
+    url: "/about",
+    images: ["/og/og-hero.png"],
+  },
+};
 
 function initials(name: string): string {
   return name

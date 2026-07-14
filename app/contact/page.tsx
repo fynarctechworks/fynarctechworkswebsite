@@ -3,7 +3,19 @@ import { Reveal } from "@/components/motion/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Contact" };
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with FYN ARC Techworks in Visakhapatnam. Share your project idea and we'll reply with a clear path forward.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact | FYN ARC Techworks",
+    description:
+      "Share your project idea and we'll reply with a clear path forward.",
+    url: "/contact",
+    images: ["/og/og-hero.png"],
+  },
+};
 
 const socials: {
   label: string;

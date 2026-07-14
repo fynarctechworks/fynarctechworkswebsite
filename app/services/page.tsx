@@ -3,9 +3,21 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { services } from "@/lib/content";
 
-export const metadata = { title: "Services" };
+export const metadata = {
+  title: "Services",
+  description:
+    "Web and mobile app development, UI/UX design, AI chatbots and automation, cyber security, staffing, and professional services from FYN ARC Techworks.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Services | FYN ARC Techworks",
+    description:
+      "Web and mobile app development, UI/UX design, AI chatbots and automation, cyber security, staffing, and professional services.",
+    url: "/services",
+    images: ["/og/og-hero.png"],
+  },
+};
 
-export default function FeaturePage() {
+export default function ServicesPage() {
   return (
     <>
       {/* 1. Hero band */}

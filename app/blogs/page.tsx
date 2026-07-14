@@ -3,7 +3,19 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { BorderGlowCard } from "@/components/interactive/BorderGlowCard";
 import { blog } from "@/lib/content";
 
-export const metadata = { title: "Blog" };
+export const metadata = {
+  title: "Blog",
+  description:
+    "Insights and ideas from FYN ARC Techworks: expert tips on AI, automation, customer support, and building smarter digital products.",
+  alternates: { canonical: "/blogs" },
+  openGraph: {
+    title: "Blog | FYN ARC Techworks",
+    description:
+      "Expert tips on AI, automation, customer support, and building smarter digital products.",
+    url: "/blogs",
+    images: ["/og/og-hero.png"],
+  },
+};
 
 export default function BlogPage() {
   return (

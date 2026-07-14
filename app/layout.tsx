@@ -30,13 +30,15 @@ export const metadata: Metadata = {
     description: site.metaDescription,
     images: [site.ogImage],
   },
-  alternates: { canonical: site.domain },
+  // "/" resolves against metadataBase → homepage canonical. Every other route
+  // overrides with its own path so Google indexes each page separately.
+  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
 };
 
 const orgSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
   name: site.name,
   url: site.domain,
   logo: site.favicon,

@@ -59,7 +59,7 @@ export function ServicesPreview() {
 
         <Reveal delay={0.1} className="mt-14 flex justify-center">
           <Magnetic>
-            <Link href="/feature" className="btn-ghost">
+            <Link href="/services" className="btn-ghost">
               View all services
             </Link>
           </Magnetic>

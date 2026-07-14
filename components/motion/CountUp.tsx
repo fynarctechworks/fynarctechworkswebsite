@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { animate, useInView } from "framer-motion";
 
-// Recreates the hero/stat count-up animation from the live site.
-// Runs once when scrolled into view. Handles suffixes like %, x, +.
+// Server-renders the FINAL value (crawlers and no-JS users see "98%", not
+// "0%"), then animates 0 → value once scrolled into view after hydration.
 export function CountUp({
   to,
   suffix = "",
@@ -22,7 +22,7 @@ export function CountUp({
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.5 });
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(to);
 
   useEffect(() => {
     if (!inView) return;

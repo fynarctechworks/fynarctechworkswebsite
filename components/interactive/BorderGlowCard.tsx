@@ -1,14 +1,11 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { type ReactNode } from "react";
+import BorderGlow from "./BorderGlow";
 
-// BorderGlow uses pointer events + CSS masks — client only. Load it dynamically
-// with an SSR-safe static fallback so cards render immediately, then upgrade.
-const BorderGlow = dynamic(() => import("./BorderGlow"), {
-  ssr: false,
-  loading: () => null,
-});
+// Static import so card CONTENT server-renders (dynamic ssr:false skipped the
+// whole subtree inside client components, hiding it from crawlers). BorderGlow
+// only touches canvas/pointer APIs inside useEffect, so SSR is safe.
 
 type BorderGlowCardProps = {
   children: ReactNode;
